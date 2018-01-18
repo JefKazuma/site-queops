@@ -6,7 +6,7 @@ class Header extends Component {
     super(props)
   
     this.state = {
-      classe: 'bg-color-light-dark'
+      classe: 'bg-color-transparent'
     }
   }
   
