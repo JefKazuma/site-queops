@@ -4,7 +4,7 @@ import './Banner.scss'
 class Banner extends Component {
   render() {
     return (
-      <div className='banner'>
+      <div id='banner' className='banner'>
         <ul>
           <li>
           </li>

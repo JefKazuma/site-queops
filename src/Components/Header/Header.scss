@@ -1,4 +1,4 @@
-$media-tablet: '767px';
+@import '../../_App.scss';
 
 header {
   position: fixed;
@@ -30,20 +30,20 @@ header {
       display: none;
       width: 35px;
       height: 35px;
-      border: 1px solid #fff;
+      border: 1px solid $c-white;
       border-radius: 5px;
       text-align: center;
       line-height: 35px;
       font-size: 20px;
       float: right;
       margin: 15px 0 0 0;
-      color: #fff;
+      color: $c-white;
       transition: all 0.4s;
       cursor: pointer;
 
       &:hover {
-        background: #fff;
-        color: #feb100;
+        background: $c-white;
+        color: $c-yellow;
       }
     }
     
@@ -71,11 +71,11 @@ header {
           a {
             display: block;
             text-decoration: none;
-            color: #fff;
+            color: $c-white;
             transition: all 0.4s;
 
             &:hover {
-              color: #feb100;
+              color: $c-yellow;
             }
           }
         }

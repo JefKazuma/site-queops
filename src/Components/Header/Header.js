@@ -1,15 +1,21 @@
 import React, { Component } from 'react';
-import './Header.scss'
+import './Header.scss';
+import scroll from "scroll-to-element";
 
 class Header extends Component {
   constructor(props) {
-    super(props)
+    super(props);
+    this.scroll = scroll;
   
     this.state = {
       classe: 'bg-color-transparent',
-      isMobile: false
-    }
-    this.openMenu = this.openMenu.bind(this);
+      isMobile: false,
+      configToScroll: {
+        offset: 0,
+        ease: 'inExpo',
+        duration: 500
+      }
+    };
   }
   
   componentDidMount() {
@@ -25,28 +31,35 @@ class Header extends Component {
   openMenu() {
     this.setState(prevState => ({
       isMobile: !prevState.isMobile
-    }))
+    }));
+  }
+
+  scrollToElement(id) {
+    this.setState({
+      isMobile: false
+    });
+    this.scroll(id, this.state.configToScroll);
   }
 
   render() {
     return (
       <header className={this.state.classe}>
         <div>
-          <a className='logo' href='/' title='Quéops Engenharia'>Quéops Engenharia</a>
-          <i className='fa fa-bars menu-mobile' onClick={this.openMenu}></i>
+          <a className='logo' onClick={() => this.scrollToElement('#banner')} title='Quéops Engenharia'>Quéops Engenharia</a>
+          <i className='fa fa-bars menu-mobile' onClick={this.openMenu.bind(this)}></i>
           <nav className={`menu ${this.state.isMobile ? 'active' : ''}`}>
             <ul>
               <li>
-                <a href='/' title='Quem somos'>Quem somos</a>
+                <a onClick={() => this.scrollToElement('#cases')} title='Quem somos'>Quem somos</a>
               </li>
               <li>
-                <a href='/' title='Portfólio'>Portfólio</a>
+                <a onClick={() => this.scrollToElement('#cases')} title='Cases'>Cases</a>
               </li>
               <li>
-                <a href='/' title='Depoimentos'>Depoimentos</a>
+                <a onClick={() => this.scrollToElement('#parceiros')} title='Parceiros'>Parceiros</a>
               </li>
               <li>
-                <a href='/' title='Contato'>Contato</a>
+                <a onClick={() => this.scrollToElement('#contato')} title='Contato'>Contato</a>
               </li>
             </ul>
           </nav>
