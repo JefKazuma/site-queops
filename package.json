@@ -1,7 +1,7 @@
 {
   "name": "site-queops",
   "homepage": "https://jefkazuma.github.io/site-queops",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "private": true,
   "dependencies": {
     "autoprefixer": "7.1.6",
