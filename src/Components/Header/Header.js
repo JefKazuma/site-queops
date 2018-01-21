@@ -43,7 +43,7 @@ class Header extends Component {
 
   render() {
     return (
-      <header className={this.state.classe}>
+      <header id='header-menu' className={this.state.classe}>
         <div>
           <a className='logo' onClick={() => this.scrollToElement('#banner')} title='Quéops Engenharia'>Quéops Engenharia</a>
           <i className='fa fa-bars menu-mobile' onClick={this.openMenu.bind(this)}></i>

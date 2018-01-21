@@ -1,9 +1,10 @@
 @import '../../_App.scss';
 
-header {
+#header-menu {
   position: fixed;
   width: 100%;
   transition: all 0.8s;
+  z-index: 99;
 
   &.bg-color-light-dark {
     background-color: rgba($color: #332f2e, $alpha: 0.9);
@@ -85,7 +86,7 @@ header {
 }
 
 @media only screen and (max-width : $media-tablet) {
-  header {
+  #header-menu {
     background-color: rgba($color: #332f2e, $alpha: 0.9);
 
     div {
