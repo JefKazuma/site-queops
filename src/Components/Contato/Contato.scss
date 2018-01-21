@@ -1,0 +1,38 @@
+@import '../../_App.scss';
+
+#contato {
+  background-color: #373941;
+
+  > div {
+    max-width: 800px;
+    padding: 30px 30px 55px;
+    margin: 0 auto;
+
+    h2 {
+      font-size: 36px;
+      font-weight: normal;
+      line-height: 42px;
+      margin: 0 0 10px;
+      text-align: center;
+      color: $c-white;
+    }
+
+    .conteudo {
+      display: flex;
+      justify-content: space-between;
+
+      article {
+        i {
+          font-size: 18px;
+          color: $c-yellow;
+          margin-right: 10px;
+        }
+
+        span {
+          font-size: 15px;
+          color: $c-white;
+        }
+      }
+    }
+  }
+}

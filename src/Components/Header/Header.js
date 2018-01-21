@@ -11,7 +11,7 @@ class Header extends Component {
       classe: 'bg-color-transparent',
       isMobile: false,
       configToScroll: {
-        offset: 0,
+        offset: -75,
         ease: 'inExpo',
         duration: 500
       }
