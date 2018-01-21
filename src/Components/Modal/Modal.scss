@@ -1,0 +1,83 @@
+@import '../../_App.scss';
+@import "~slick-carousel/slick/slick.css";
+@import "~slick-carousel/slick/slick-theme.css";
+
+.modal-open {
+  overflow: hidden;
+}
+
+.custom-modal {
+  height: 100%;
+  overflow-y: auto;
+  background-color: $c-white;
+
+  .custom-modal-title {
+    padding: 20px;
+    background-color: $c-yellow;
+    color: $c-white;
+    display: flex;
+    justify-content: space-between;
+
+    h2 {
+      font-size: 25px;
+      margin: 0;
+    }
+
+    i.fa {
+      font-size: 30px;
+      color: $c-white;
+      cursor: pointer;
+    }
+  }
+
+  .custom-modal-text {
+    padding: 20px;
+
+    p {
+      margin: 0 0 20px 0;
+    }
+  }
+  
+  .custom-moda-galery {
+    padding: 10px 30px 40px;
+
+    .slick-track {
+      display: flex;
+    }
+
+    .slick-slide {
+      height: auto;
+      max-height: 500px;
+      align-self: center;
+    }
+
+    .center {
+      img {
+        width: calc(100% - 20px);
+        margin: 10px;
+        opacity: 0.8;
+        cursor: pointer;
+      }
+
+      .slick-center {
+        img {
+          opacity: 1;
+          transform: scale(1.08);
+        }
+      }
+    }
+
+    .slick-prev:before,
+    .slick-next:before {
+      color: $c-yellow;
+    }
+  }
+}
+
+.ReactModalPortal {
+  z-index: 9998;
+
+  .ReactModal__Overlay {
+    z-index: 9999 !important;
+  }
+}
