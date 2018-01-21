@@ -1,6 +1,4 @@
 @import '../../_App.scss';
-@import "~slick-carousel/slick/slick.css";
-@import "~slick-carousel/slick/slick-theme.css";
 
 #cases {
   background-color: #373941;
@@ -17,32 +15,6 @@
       margin: 0 0 10px;
       text-align: center;
       color: $c-white;
-    }
-
-    .pagetitle-separator {
-      background: $c-white;
-      height: 1px;
-      margin: 23px auto 35px;
-      width: 250px;
-
-      .pagetitle-separator-border {
-        background-color: $c-yellow;
-        width: 101px;
-        height: 3px;
-        margin: 0 auto;
-        position: relative;
-        top: -2px;
-
-        .pagetitle-separator-box {
-          background: none repeat scroll 0 0 $c-yellow;
-          width: 10px;
-          height: 10px;
-          margin: 23px auto 45px;
-          position: relative;
-          top: -4px;
-          transform: rotate(45deg);
-        }
-      }
     }
 
     .cases-list {

@@ -4,3 +4,34 @@ $media-tablet: 767px;
 // colors
 $c-white: #fff;
 $c-yellow: #feb100;
+
+.pagetitle-separator {
+  background: $c-white;
+  height: 1px;
+  margin: 23px auto 35px;
+  width: 250px;
+
+  .pagetitle-separator-border {
+    background-color: $c-yellow;
+    width: 101px;
+    height: 3px;
+    margin: 0 auto;
+    position: relative;
+    top: -2px;
+
+    .pagetitle-separator-box {
+      background: none repeat scroll 0 0 $c-yellow;
+      width: 10px;
+      height: 10px;
+      margin: 23px auto 45px;
+      position: relative;
+      top: -4px;
+      transform: rotate(45deg);
+    }
+  }
+}
+
+.slick-prev:before,
+.slick-next:before {
+  color: $c-yellow;
+}
