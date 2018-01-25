@@ -22,6 +22,8 @@
       justify-content: space-between;
 
       article {
+        width: 30%;
+        
         i {
           font-size: 18px;
           color: $c-yellow;
@@ -31,6 +33,33 @@
         span {
           font-size: 15px;
           color: $c-white;
+        }
+      }
+
+      aside {
+        width: 70%;
+
+        iframe {
+          border: 0 none;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width : $media-tablet) {
+  #contato {
+    > div {
+      .conteudo {
+        display: block;
+
+        article {
+          width: 100%;
+          margin-bottom: 30px;
+        }
+        
+        aside {
+          width: 100%;
         }
       }
     }
