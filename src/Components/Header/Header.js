@@ -12,8 +12,9 @@ class Header extends Component {
       isMobile: false,
       configToScroll: {
         offset: -75,
-        ease: 'inExpo',
-        duration: 500
+        delay: 0,
+        smooth: 'easeInOutQuart',
+        duration: 400
       }
     };
   }
