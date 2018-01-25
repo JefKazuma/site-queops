@@ -25,7 +25,9 @@ class Modal extends Component {
               slidesToShow: 1,
             }
           }
-        ]
+        ],
+        prevArrow: <this.SamplePrevArrow />,
+        nextArrow: <this.SampleNextArrow />
       },
       isOpen: false,
       title: '',
@@ -44,6 +46,28 @@ class Modal extends Component {
         height: '100%'
       }
     }
+  }
+
+  SampleNextArrow(props) {
+    const {className, style, onClick} = props
+    return (
+      <div
+        className={className}
+        style={{...style}}
+        onClick={onClick}
+      ><i className='fa fa-angle-right'></i></div>
+    );
+  }
+
+  SamplePrevArrow(props) {
+    const {className, style, onClick} = props
+    return (
+      <div
+        className={className}
+        style={{...style}}
+        onClick={onClick}
+      ><i className='fa fa-angle-left'></i></div>
+    );
   }
 
   componentDidMount() {

@@ -41,6 +41,20 @@
   .custom-moda-galery {
     padding: 10px 30px 40px;
 
+    .slick-prev,
+    .slick-next {
+      height: 50px;
+
+      .fa {
+        font-size: 50px;
+        color: $c-yellow;
+      }
+
+      &::before {
+        display: none;
+      }
+    }
+
     .slick-track {
       display: flex;
     }

@@ -38,12 +38,35 @@ class Parceiros extends Component {
               slidesToShow: 1,
             }
           }
-        ]
+        ],
+        prevArrow: <this.SamplePrevArrow />,
+        nextArrow: <this.SampleNextArrow />
       }
     }
   }
-  
 
+  SampleNextArrow(props) {
+    const {className, style, onClick} = props
+    return (
+      <div
+        className={className}
+        style={{...style}}
+        onClick={onClick}
+      ><i className='fa fa-angle-right'></i></div>
+    );
+  }
+
+  SamplePrevArrow(props) {
+    const {className, style, onClick} = props
+    return (
+      <div
+        className={className}
+        style={{...style}}
+        onClick={onClick}
+      ><i className='fa fa-angle-left'></i></div>
+    );
+  }
+  
   render() {
     return (
       <div id='parceiros'>
