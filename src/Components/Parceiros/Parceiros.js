@@ -7,7 +7,7 @@ import Parceiros2 from "../../img/parceiros/2.jpg";
 import Parceiros3 from "../../img/parceiros/3.png";
 import Parceiros4 from "../../img/parceiros/4.png";
 import Parceiros5 from "../../img/parceiros/5.png";
-import Parceiros6 from "../../img/parceiros/6.jpg";
+import Parceiros6 from "../../img/parceiros/6.png";
 import Parceiros7 from "../../img/parceiros/7.png";
 
 class Parceiros extends Component {
