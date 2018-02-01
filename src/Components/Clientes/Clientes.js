@@ -1,19 +1,19 @@
 import React, { Component } from 'react';
 import Slider from 'react-slick';
-import './Parceiros.scss';
+import './Clientes.scss';
 
-import Parceiros1 from "../../img/parceiros/1.png";
-import Parceiros2 from "../../img/parceiros/2.jpg";
-import Parceiros3 from "../../img/parceiros/3.png";
-import Parceiros4 from "../../img/parceiros/4.png";
-import Parceiros5 from "../../img/parceiros/5.png";
-import Parceiros6 from "../../img/parceiros/6.png";
-import Parceiros7 from "../../img/parceiros/7.png";
+import Clientes1 from "../../img/clientes/1.png";
+import Clientes2 from "../../img/clientes/2.jpg";
+import Clientes3 from "../../img/clientes/3.png";
+import Clientes4 from "../../img/clientes/4.png";
+import Clientes5 from "../../img/clientes/5.png";
+import Clientes6 from "../../img/clientes/6.png";
+import Clientes7 from "../../img/clientes/7.png";
 
-class Parceiros extends Component {
+class Clientes extends Component {
   constructor(props) {
     super(props);
-    
+
 
     this.state = {
       settings: {
@@ -66,12 +66,12 @@ class Parceiros extends Component {
       ><i className='fa fa-angle-left'></i></div>
     );
   }
-  
+
   render() {
     return (
-      <div id='parceiros'>
+      <div id='clientes'>
         <div>
-          <h2>Parceiros</h2>
+          <h2>Clientes</h2>
           <div className='pagetitle-separator'>
             <div className='pagetitle-separator-border'>
               <div className='pagetitle-separator-box'></div>
@@ -79,25 +79,25 @@ class Parceiros extends Component {
           </div>
           <Slider {...this.state.settings}>
             <div>
-              <img src={Parceiros1} alt={Parceiros1} />
+              <img src={Clientes1} alt={Clientes1} />
             </div>
             <div>
-              <img src={Parceiros2} alt={Parceiros2} />
+              <img src={Clientes2} alt={Clientes2} />
             </div>
             <div>
-              <img src={Parceiros3} alt={Parceiros3} />
+              <img src={Clientes3} alt={Clientes3} />
             </div>
             <div>
-              <img src={Parceiros4} alt={Parceiros4} />
+              <img src={Clientes4} alt={Clientes4} />
             </div>
             <div>
-              <img src={Parceiros5} alt={Parceiros5} />
+              <img src={Clientes5} alt={Clientes5} />
             </div>
             <div>
-              <img src={Parceiros6} alt={Parceiros6} />
+              <img src={Clientes6} alt={Clientes6} />
             </div>
             <div>
-              <img src={Parceiros7} alt={Parceiros7} />
+              <img src={Clientes7} alt={Clientes7} />
             </div>
           </Slider>
         </div>
@@ -106,4 +106,4 @@ class Parceiros extends Component {
   }
 }
 
-export default Parceiros;
+export default Clientes;

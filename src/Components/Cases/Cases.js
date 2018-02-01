@@ -16,7 +16,7 @@ import './Cases.scss';
 class Cases extends Component {
   constructor(props) {
     super(props);
-    
+
     this.state = {
       cases: [
         {
@@ -48,7 +48,7 @@ class Cases extends Component {
       ]
     };
   }
-  
+
   openModal(typeModal) {
     this.modal.showModal(this.state.cases[typeModal]);
   }
@@ -64,24 +64,30 @@ class Cases extends Component {
             </div>
           </div>
           <ul className='cases-list'>
-            <li className='cases-item' style={{backgroundImage: 'url(' + CaseIndustrial1 + ')'}}>
-              <div className='cases-text'>
-                <h3>Industrial</h3>
-                <a title='Clique aqui para mais informações' onClick={() => this.openModal(0)}>
-                  Leia mais
-                </a>
-              </div>
-              <div className='cases-item-background' style={{backgroundImage: 'url(' + CaseIndustrial1 + ')'}}></div>
-            </li>
-            <li className='cases-item'>
-              <div className='cases-text'>
-                <h3>Residencial</h3>
-                <a title='Clique aqui para mais informações' onClick={() => this.openModal(1)}>
-                  Leia mais
-                </a>
-              </div>
-              <div className='cases-item-background' style={{backgroundImage: 'url(' + CaseResidencial1 + ')'}}></div>
-            </li>
+            <a title='Clique aqui para mais informações' onClick={() => this.openModal(0)}>
+
+              <li className='cases-item' style={{backgroundImage: 'url(' + CaseIndustrial1 + ')'}}>
+
+                <div className='cases-text'>
+                  <h3>Industrial</h3>
+                  <a title='Clique aqui para mais informações' onClick={() => this.openModal(0)}>
+                    Leia mais
+                  </a>
+                </div>
+                <div className='cases-item-background' style={{backgroundImage: 'url(' + CaseIndustrial1 + ')'}}></div>
+              </li>
+             </a>
+            <a title='Clique aqui para mais informações' onClick={() => this.openModal(1)}>
+              <li className='cases-item'>
+                <div className='cases-text'>
+                  <h3>Residencial</h3>
+                  <a title='Clique aqui para mais informações' onClick={() => this.openModal(1)}>
+                    Leia mais
+                  </a>
+                </div>
+                <div className='cases-item-background' style={{backgroundImage: 'url(' + CaseResidencial1 + ')'}}></div>
+              </li>
+            </a>
           </ul>
         </div>
         {
