@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import './Parceiros.scss';
 
-class Contato extends Component {
+class Parceiros extends Component {
   render() {
     return (
-      <div id='contato'>
+      <div id='parceiros'>
         <div>
           <h2>Parceiros</h2>
           <div className='pagetitle-separator'>
@@ -24,7 +24,7 @@ class Contato extends Component {
               </article>
 
             <aside>
-              <p>aqui era o mapa</p>
+              <p>Texto sobre a Mosaic?</p>
             </aside>
           </div>
         </div>
@@ -33,4 +33,4 @@ class Contato extends Component {
   }
 }
 
-export default Contato;
+export default Parceiros;

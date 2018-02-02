@@ -1,6 +1,6 @@
 @import '../../_App.scss';
 
-#contato {
+#parceiros {
   background-color: #373941;
 
 
@@ -24,6 +24,8 @@
 
       article {
         width: 30%;
+        text-align: center;
+
 
 
         i {
@@ -33,7 +35,7 @@
         }
 
         span, p, h3 {
-          font-size: 15px;
+          font-size: 18px;
           color: $c-white;
 
 
@@ -47,6 +49,9 @@
 
       aside {
         width: 70%;
+        color: $c-white;
+        font-size: 15px;
+
 
         iframe {
           border: 0 none;

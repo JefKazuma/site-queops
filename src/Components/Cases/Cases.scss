@@ -17,6 +17,14 @@
       color: $c-white;
     }
 
+    .cases-title {
+      font-size: 25px;
+      font-weight: 300;
+      margin: 0;
+      text-transform: uppercase;
+      color: $c-white;
+    }
+
     .cases-list {
       max-width: 1200px;
       margin: 0 auto;
@@ -52,6 +60,9 @@
             transition: all 0.4s;
           }
         }
+
+
+
 
         .cases-text {
           position: relative;

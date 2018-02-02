@@ -65,28 +65,27 @@ class Cases extends Component {
           </div>
           <ul className='cases-list'>
             <a title='Clique aqui para mais informações' onClick={() => this.openModal(0)}>
-
+              <h3 className="cases-title">Industrial</h3>
               <li className='cases-item' style={{backgroundImage: 'url(' + CaseIndustrial1 + ')'}}>
-
                 <div className='cases-text'>
-                  <h3>Industrial</h3>
                   <a title='Clique aqui para mais informações' onClick={() => this.openModal(0)}>
                     Leia mais
                   </a>
                 </div>
                 <div className='cases-item-background' style={{backgroundImage: 'url(' + CaseIndustrial1 + ')'}}></div>
               </li>
-             </a>
+            </a>
+
             <a title='Clique aqui para mais informações' onClick={() => this.openModal(1)}>
-              <li className='cases-item'>
-                <div className='cases-text'>
-                  <h3>Residencial</h3>
-                  <a title='Clique aqui para mais informações' onClick={() => this.openModal(1)}>
-                    Leia mais
-                  </a>
-                </div>
-                <div className='cases-item-background' style={{backgroundImage: 'url(' + CaseResidencial1 + ')'}}></div>
-              </li>
+              <h3 className="cases-title">Residencial</h3>
+                <li className='cases-item'>
+                  <div className='cases-text'>
+                    <a title='Clique aqui para mais informações' onClick={() => this.openModal(1)}>
+                      Leia mais
+                    </a>
+                  </div>
+                  <div className='cases-item-background' style={{backgroundImage: 'url(' + CaseResidencial1 + ')'}}></div>
+                </li>
             </a>
           </ul>
         </div>
