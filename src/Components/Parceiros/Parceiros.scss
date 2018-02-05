@@ -23,7 +23,7 @@
       justify-content: space-between;
 
       article {
-        width: 30%;
+        // width: 30%;
         text-align: center;
 
 
@@ -39,6 +39,7 @@
           color: $c-white;
 
 
+
           a:-webkit-any-link {
             color: white;
             text-decoration: none;
@@ -51,6 +52,7 @@
         width: 70%;
         color: $c-white;
         font-size: 15px;
+        text-decoration: none;
 
 
         iframe {

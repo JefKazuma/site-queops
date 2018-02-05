@@ -23,9 +23,9 @@ class Parceiros extends Component {
                 <p>aqui tinha os telefones</p>
               </article>
 
-            <aside>
+            {/* <aside>
               <p>Texto sobre a Mosaic?</p>
-            </aside>
+            </aside> */}
           </div>
         </div>
       </div>
