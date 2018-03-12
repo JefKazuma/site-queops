@@ -20,11 +20,11 @@ class Contato extends Component {
                   (44) 99827-6382
                 </p>
                 <p>
-                  <a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/Queops.Eng/"><i class="fa fa-facebook-square"></i>facebook.com/Queops.Eng</a>
+                  <a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/Queops.Eng/"><i className="fa fa-facebook-square"></i>facebook.com/Queops.Eng</a>
                 </p>
                 <p>
 
-                  <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/company/qu%C3%A9ops-engenharia/"><i class="fa fa-linkedin"></i>Quéops Engenharia</a>
+                  <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/company/qu%C3%A9ops-engenharia/"><i className="fa fa-linkedin"></i>Quéops Engenharia</a>
                 </p>
               </article>
 
