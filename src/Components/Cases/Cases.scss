@@ -17,11 +17,21 @@
       color: $c-white;
     }
 
+    .cases-title {
+      font-size: 25px;
+      font-weight: 300;
+      margin: 0;
+      text-transform: uppercase;
+      color: $c-white;
+    }
+
     .cases-list {
       max-width: 1200px;
       margin: 0 auto;
       padding: 0 20px 20px;
       text-align: center;
+      display: flex;
+      justify-content: center;
 
       .cases-item {
         position: relative;
@@ -53,24 +63,28 @@
           }
         }
 
+
+
+
         .cases-text {
           position: relative;
           height: 100%;
           z-index: 2;
 
-          h3 {
+          h3 {  /*industrial e residencial*/
             font-size: 25px;
             font-weight: 300;
             padding-top: 100px;
             margin: 0;
             text-transform: uppercase;
+            color: $c-white;
           }
 
-          a {
+          a {  /* isso muda o botão*/
             position: absolute;
             font-size: 15px;
             display: inline-block;
-            border: 1px solid #000;
+            border: 1px solid #373941; /*borda do botão*/
             border-radius: 5px;
             text-transform: uppercase;
             padding: 10px 20px;
@@ -78,6 +92,7 @@
             right: 35px;
             bottom: 35px;
             transition: all 0.4s;
+            background-color: rgba($color: $c-yellow, $alpha: 0.5);
 
             &:hover {
               background-color: $c-yellow;

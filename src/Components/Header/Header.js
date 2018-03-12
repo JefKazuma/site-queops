@@ -6,7 +6,7 @@ class Header extends Component {
   constructor(props) {
     super(props);
     this.scroll = scroll;
-  
+
     this.state = {
       classe: 'bg-color-transparent',
       isMobile: false,
@@ -18,7 +18,7 @@ class Header extends Component {
       }
     };
   }
-  
+
   componentDidMount() {
     window.addEventListener('scroll', (event) => {
       if (window.innerWidth >= 767) {
@@ -57,7 +57,10 @@ class Header extends Component {
                 <a onClick={() => this.scrollToElement('#cases')} title='Cases'>Cases</a>
               </li>
               <li>
-                <a onClick={() => this.scrollToElement('#parceiros')} title='Parceiros'>Parceiros</a>
+                <a onClick={() => this.scrollToElement('#clientes')} title='Clientes'>Clientes</a>
+              </li>
+              <li>
+              <a onClick={() => this.scrollToElement('#parceiros')} title='Parceiros'>Parceiros</a>
               </li>
               <li>
                 <a onClick={() => this.scrollToElement('#contato')} title='Contato'>Contato</a>
