@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import Modal from '../Modal/Modal';
 
+import Modal from '../Modal/Modal'
+import CaseItem from './CaseItem'
 import CaseIndustrial1 from '../../img/cases/industrial/1.png';
 import CaseIndustrial2 from '../../img/cases/industrial/2.png';
 import CaseIndustrial3 from '../../img/cases/industrial/3.png';
@@ -21,6 +22,7 @@ class Cases extends Component {
       cases: [
         {
           title: 'Industrial',
+          backgroundImage: CaseIndustrial1,
           text: (
             <div>
               <h3>Contato</h3>
@@ -36,6 +38,7 @@ class Cases extends Component {
         },
         {
           title: 'Residencial',
+          backgroundImage: CaseResidencial1,
           text: (
             <div>
               <p>Com o sonho de construir sua casa própria em condomínio fechado, a cliente Adriana Pelegrini, de Presidente Prudente/SP, encontrava dificuldade diante dos valores abusivos cobrados por construtores da cidade, chegando a R$ 3.000,00/m².</p>
@@ -49,11 +52,13 @@ class Cases extends Component {
     };
   }
 
-  openModal(typeModal) {
-    this.modal.showModal(this.state.cases[typeModal]);
+  openModal = (caseItem) => {
+    this.modal.showModal(caseItem)
   }
 
   render() {
+    const {cases} = this.state
+
     return (
       <div id='cases'>
         <div>
@@ -64,29 +69,7 @@ class Cases extends Component {
             </div>
           </div>
           <ul className='cases-list'>
-            <a title='Clique aqui para mais informações' onClick={() => this.openModal(0)}>
-              <h3 className="cases-title">Industrial</h3>
-              <li className='cases-item' style={{backgroundImage: 'url(' + CaseIndustrial1 + ')'}}>
-                <div className='cases-text'>
-                  <a title='Clique aqui para mais informações' onClick={() => this.openModal(0)}>
-                    Leia mais
-                  </a>
-                </div>
-                <div className='cases-item-background' style={{backgroundImage: 'url(' + CaseIndustrial1 + ')'}}></div>
-              </li>
-            </a>
-
-            <a title='Clique aqui para mais informações' onClick={() => this.openModal(1)}>
-              <h3 className="cases-title">Residencial</h3>
-                <li className='cases-item'>
-                  <div className='cases-text'>
-                    <a title='Clique aqui para mais informações' onClick={() => this.openModal(1)}>
-                      Leia mais
-                    </a>
-                  </div>
-                  <div className='cases-item-background' style={{backgroundImage: 'url(' + CaseResidencial1 + ')'}}></div>
-                </li>
-            </a>
+            {cases.map(caseItem => <CaseItem caseItem={caseItem} openModal={this.openModal} />)}
           </ul>
         </div>
         {
