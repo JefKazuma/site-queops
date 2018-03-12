@@ -4,10 +4,15 @@ import Slider from 'react-slick';
 import Lightbox from "react-image-lightbox";
 import './Modal.scss';
 
+import {
+  categories,
+  itemsByCategory,
+} from '../data'
+
+
 class Modal extends Component {
-  constructor(props) {
-    super(props);
-    
+  constructor() {
+    super()
     this.state = {
       settings: {
         dots: true,
@@ -48,6 +53,16 @@ class Modal extends Component {
     }
   }
 
+  componentDidMount() {
+    document.body.classList.add('modal-open')
+    this.refs.modal.show()
+  }
+
+  componentWillUnmount() {
+    document.body.classList.remove('modal-open')
+    this.refs.modal.hide()
+  }
+
   SampleNextArrow(props) {
     const {className, style, onClick} = props
     return (
@@ -70,37 +85,6 @@ class Modal extends Component {
     );
   }
 
-  componentDidMount() {
-    this.props.onRef(this)
-  }
-
-  componentWillUnmount() {
-    this.props.onRef(undefined)
-  }
-  
-  showModal(item) {
-    this.addClassModal();
-    this.setState({
-      title: item.title,
-      text: item.text,
-      imgs: item.imgs
-    })
-    this.refs.modal.show();
-  }
-  
-  hideModal() {
-    this.removeClassModal();
-    this.refs.modal.hide();
-  }
-  
-  removeClassModal() {
-    document.body.classList.remove('modal-open')
-  }
-  
-  addClassModal() {
-    document.body.classList.add('modal-open')
-  }
-
   openImage(id) {
     this.setState({
       openImg: id,
@@ -109,22 +93,32 @@ class Modal extends Component {
   }
 
   render() {
+    const category = categories[this.props.selectedCategoryId]
+    const items = itemsByCategory[this.props.selectedCategoryId]
+    const item = items && items[0]
+
     return (
-      <Baron ref={'modal'} keyboard={false} onHide={() => this.removeClassModal()} modalStyle={this.state.modalStyle} contentStyle={this.state.contentStyle}>
+      <Baron
+        ref={'modal'}
+        keyboard={false}
+        onHide={this.props.onClose}
+        modalStyle={this.state.modalStyle}
+        contentStyle={this.state.contentStyle}
+      >
         <div className='custom-modal'>
           <div className='custom-modal-title'>
-            <h2>{this.state.title}</h2>
-            <i className='fa fa-times-circle' onClick={() => this.hideModal()}></i>
+            <h2>{category && category.title}</h2>
+            <i className='fa fa-times-circle' onClick={this.props.onClose}></i>
           </div>
           <div className='custom-modal-text'>
-            {this.state.text}
+            {item && item.textJsx}
           </div>
           <div className='custom-moda-galery'>
             <Slider {...this.state.settings}>
               {
-                this.state.imgs.map((item, id) => (
+                item && item.images.map((obj, id) => (
                   <div key={id} onClick={() => this.openImage(id)}>
-                    <img src={item} alt={item} />
+                    <img src={obj} alt={obj} />
                   </div>
                 ))
               }
@@ -134,23 +128,23 @@ class Modal extends Component {
         {
           this.state.isOpen &&
           <Lightbox
-            mainSrc={this.state.imgs[this.state.openImg]}
+            mainSrc={item.images[this.state.openImg]}
             onCloseRequest={() => this.setState({ isOpen: false })}
-            nextSrc={this.state.imgs[(this.state.openImg + 1) % this.state.imgs.length]}
-            prevSrc={this.state.imgs[(this.state.openImg + this.state.imgs.length - 1) % this.state.imgs.length]}
+            nextSrc={item.images[(this.state.openImg + 1) % item.images.length]}
+            prevSrc={item.images[(this.state.openImg + item.images.length - 1) % item.images.length]}
             onMovePrevRequest={() =>
               this.setState({
-                openImg: (this.state.openImg + this.state.imgs.length - 1) % this.state.imgs.length,
+                openImg: (this.state.openImg + item.images.length - 1) % item.images.length,
               })
             }
             onMoveNextRequest={() =>
               this.setState({
-                openImg: (this.state.openImg + 1) % this.state.imgs.length,
+                openImg: (this.state.openImg + 1) % item.images.length,
               })
             }/>
         }
       </Baron>
-    );
+    )
   }
 }
 

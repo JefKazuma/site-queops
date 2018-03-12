@@ -13,9 +13,7 @@ class Category extends React.Component {
         <h3 className="cases-title">{category.title}</h3>
         <li className='cases-item' style={{backgroundImage: 'url(' + category.backgroundImage + ')'}}>
           <div className='cases-text'>
-            <a title='Clique aqui para mais informações' onClick={this.handleClick}>
-              Leia mais
-            </a>
+            Leia mais
           </div>
           <div className='cases-item-background' style={{backgroundImage: 'url(' + category.backgroundImage + ')'}}></div>
         </li>
