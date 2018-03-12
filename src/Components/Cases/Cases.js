@@ -14,6 +14,26 @@ import CaseResidencial2 from "../../img/cases/residencial/2.jpg";
 
 import './Cases.scss';
 
+/**
+ * Data re-structuring mock-up: Renaming "Cases" to "Portfolio"
+ *
+ * Portfolio-item:
+ *   * category_id
+ *   * client_id
+ *   * textJSX
+ *   * images
+ *
+ *
+ * Portfolio-category:
+ *   * industrial
+ *   * residential
+ *
+ * Client:
+ *   * Tabacaria
+ *   * Panamex
+ *   * Pack Plus
+ *
+ */
 class Cases extends Component {
   constructor(props) {
     super(props);
