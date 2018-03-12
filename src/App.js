@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Banner from "./Components/Banner/Banner";
 import Header from "./Components/Header/Header";
-import Cases from "./Components/Cases/Cases";
+import Portfolio from './Components/Portfolio'
 import Clientes from "./Components/Clientes/Clientes";
 import Parceiros from "./Components/Parceiros/Parceiros"
 import Contato from "./Components/Contato/Contato";
@@ -12,7 +12,7 @@ class App extends Component {
       <div className="App">
         <Header />
         <Banner />
-        <Cases />
+        <Portfolio />
         <Clientes />
         <Parceiros/>
         <Contato />
