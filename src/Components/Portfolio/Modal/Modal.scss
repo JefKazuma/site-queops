@@ -30,6 +30,18 @@
     }
   }
 
+  .custom-modal-tab-container {
+    display: flex;
+
+    .custom-modal-tab {
+      background-color: $c-yellow;
+      color: $c-white;
+      margin: 5px;
+      padding: 10px;
+      cursor: pointer;
+    }
+  }
+
   .custom-modal-text {
     padding: 20px;
 
@@ -38,7 +50,7 @@
     }
   }
 
-  .custom-moda-galery {
+  .custom-modal-galery {
     padding: 10px 30px 40px;
 
     .slick-prev,

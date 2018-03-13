@@ -2,12 +2,14 @@ import React, { Component } from 'react';
 import Baron from 'reboron/OutlineModal';
 import Slider from 'react-slick';
 import Lightbox from "react-image-lightbox";
-import './Modal.scss';
 
+import './Modal.scss';
 import {
   categories,
   itemsByCategory,
+  clients,
 } from '../data'
+import ItemTab from './ItemTab'
 
 
 class Modal extends Component {
@@ -49,7 +51,8 @@ class Modal extends Component {
       },
       contentStyle: {
         height: '100%'
-      }
+      },
+      selectedCategoryItemIndex: 0,
     }
   }
 
@@ -92,10 +95,16 @@ class Modal extends Component {
     });
   }
 
+  handleTabClick = itemIndex => {
+    this.setState({
+      selectedCategoryItemIndex: itemIndex
+    })
+  }
+
   render() {
     const category = categories[this.props.selectedCategoryId]
     const items = itemsByCategory[this.props.selectedCategoryId]
-    const item = items && items[0]
+    const item = items && items[this.state.selectedCategoryItemIndex]
 
     return (
       <Baron
@@ -110,10 +119,24 @@ class Modal extends Component {
             <h2>{category && category.title}</h2>
             <i className='fa fa-times-circle' onClick={this.props.onClose}></i>
           </div>
+          <div className='custom-modal-tab-container'>
+            {items && items.map((itm, index) => {
+              const client = clients[itm.clientId]
+              itm.client = client
+              return (
+                <ItemTab
+                  key={itm.id}
+                  item={itm}
+                  index={index}
+                  onClick={this.handleTabClick}
+                />
+              )
+            })}
+          </div>
           <div className='custom-modal-text'>
             {item && item.textJsx}
           </div>
-          <div className='custom-moda-galery'>
+          <div className='custom-modal-galery'>
             <Slider {...this.state.settings}>
               {
                 item && item.images.map((obj, id) => (
