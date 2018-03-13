@@ -1,108 +1,82 @@
 @import '../../_App.scss';
 
-#cases {
+@mixin section-title {
+  font-size: 36px;
+  font-weight: normal;
+  line-height: 42px;
+  margin: 0 0 10px;
+  text-align: center;
+  color: $c-white;
+}
+
+@mixin portfolio-list {
+  max-width: 1200px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+@mixin portfolio-category {
+  text-align: center;
+  position: relative;
+  width: 250px;
+  height: 250px;
+  cursor: pointer;
+}
+
+@mixin portfolio-category-title {
+  h3 {
+    font-size: 25px;
+    font-weight: 300;
+    margin: 0;
+    text-transform: uppercase;
+    color: $c-white;
+  }
+}
+
+@mixin portfolio-category-background {
+  height: 100%;
+  z-index: 1;
+  background-size: cover;
+  background-position: center;
+  transition: all 0.4s;
+  opacity: 0.7;
+}
+
+
+#portfolio-container {
   background-color: #373941;
 
-  > div {
+  #portfolio {
     max-width: 1200px;
-    padding: 30px 30px;
+    padding: 30px 30px 60px 30px;
     margin: 0 auto;
 
     h2 {
-      font-size: 36px;
-      font-weight: normal;
-      line-height: 42px;
-      margin: 0 0 10px;
-      text-align: center;
-      color: $c-white;
+      @include section-title;
     }
 
-    .cases-title {
-      font-size: 25px;
-      font-weight: 300;
-      margin: 0;
-      text-transform: uppercase;
-      color: $c-white;
-    }
+    .portfolio-list {
+      @include portfolio-list;
 
-    .cases-list {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 20px 20px;
-      text-align: center;
-      display: flex;
-      justify-content: center;
+      .portfolio-category {
+        @include portfolio-category;
 
-      .cases-item {
-        position: relative;
-        width: 250px;
-        height: 250px;
-        display: inline-block;
-        overflow: hidden;
-
-        .cases-item-background {
-          position: absolute;
-          width: 100%;
-          height: 100%;
-          top: 0;
-          left: 0;
-          z-index: 1;
-          background-size: cover;
-          background-position: center;
-          transition: all 0.4s;
-          opacity: 0.7;
-
-          &::before {
-            content: '';
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            top: 0;
-            left: 0;
-            transition: all 0.4s;
-          }
+        .portfolio-category-title {
+          @include portfolio-category-title;
         }
 
+        .portfolio-category-image {
+          @include portfolio-category-background;
 
-
-
-        .cases-text {
-          position: relative;
-          height: 100%;
-          z-index: 2;
-
-          h3 {  /*industrial e residencial*/
-            font-size: 25px;
-            font-weight: 300;
-            padding-top: 100px;
-            margin: 0;
-            text-transform: uppercase;
-            color: $c-white;
-          }
-
-          a {  /* isso muda o botão*/
-            position: absolute;
-            font-size: 15px;
-            display: inline-block;
-            border: 1px solid #373941; /*borda do botão*/
-            border-radius: 5px;
-            text-transform: uppercase;
-            padding: 10px 20px;
-            left: 35px;
-            right: 35px;
-            bottom: 35px;
+          &::before {
+            height: 100%;
             transition: all 0.4s;
-            background-color: rgba($color: $c-yellow, $alpha: 0.5);
-
-            &:hover {
-              background-color: $c-yellow;
-            }
           }
         }
 
         &:hover {
-          .cases-item-background {
-            transform: scale(1.2);
+          .portfolio-category-image {
+            transform: scale(1.1);
 
             &::before {
               background-color: rgba($color: $c-yellow, $alpha: 0.5);

@@ -8,16 +8,24 @@ class Category extends React.Component {
 
   render = () => {
     const {category} = this.props
+    const img = category.backgroundImage
     return (
-      <a title='Clique aqui para mais informações' onClick={this.handleClick}>
-        <h3 className="cases-title">{category.title}</h3>
-        <li className='cases-item' style={{backgroundImage: 'url(' + category.backgroundImage + ')'}}>
-          <div className='cases-text'>
-            Leia mais
-          </div>
-          <div className='cases-item-background' style={{backgroundImage: 'url(' + category.backgroundImage + ')'}}></div>
-        </li>
-      </a>
+      <div
+        className='portfolio-category'
+        title='Clique aqui para mais informações'
+        onClick={this.handleClick}
+      >
+        <div className='portfolio-category-title'>
+          <h3>
+            {category.title}
+          </h3>
+        </div>
+        <div
+          className='portfolio-category-image'
+          style={{backgroundImage: 'url(' + img + ')'}}
+        >
+        </div>
+      </div>
     )
   }
 }
