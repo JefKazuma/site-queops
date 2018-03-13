@@ -10,6 +10,10 @@ import IMAGE_CASE_INDUSTRIAL_6 from '../../img/cases/industrial/6.png'
 import IMAGE_CASE_RESIDENCIAL_1 from '../../img/cases/residencial/1.jpg'
 import IMAGE_CASE_RESIDENCIAL_2 from '../../img/cases/residencial/2.jpg'
 
+import IMAGE_REPORT_THUMBNAIL from '../../img/cases/laudos/laudos_thumbnail.png'
+
+import IMAGE_COMERCIAL_THUMBNAIL from '../../img/cases/comercial/shop.jpg'
+
 const CATEGORY = {
   INDUSTRIAL: 1,
   RESIDENCIAL: 2,
@@ -48,13 +52,13 @@ const categories = {
   },
   [CATEGORY.REPORT]: {
     id: CATEGORY.REPORT,
-    title: 'Laudo',
-    backgroundImage: '',
+    title: 'Laudos',
+    backgroundImage: IMAGE_REPORT_THUMBNAIL,
   },
   [CATEGORY.COMERCIAL]: {
     id: CATEGORY.COMERCIAL,
     title: 'Comercial',
-    backgroundImage: '',
+    backgroundImage: IMAGE_COMERCIAL_THUMBNAIL,
   },
 }
 
