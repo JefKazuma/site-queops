@@ -1,14 +1,14 @@
 import React from 'react'
 
-import ImageCaseIndustrial1 from '../../img/cases/industrial/1.png';
-import ImageCaseIndustrial2 from '../../img/cases/industrial/2.png';
-import ImageCaseIndustrial3 from '../../img/cases/industrial/3.png';
-import ImageCaseIndustrial4 from '../../img/cases/industrial/4.png';
-import ImageCaseIndustrial5 from '../../img/cases/industrial/5.jpg';
-import ImageCaseIndustrial6 from '../../img/cases/industrial/6.png';
+import IMAGE_CASE_INDUSTRIAL_1 from '../../img/cases/industrial/1.png'
+import IMAGE_CASE_INDUSTRIAL_2 from '../../img/cases/industrial/2.png'
+import IMAGE_CASE_INDUSTRIAL_3 from '../../img/cases/industrial/3.png'
+import IMAGE_CASE_INDUSTRIAL_4 from '../../img/cases/industrial/4.png'
+import IMAGE_CASE_INDUSTRIAL_5 from '../../img/cases/industrial/5.jpg'
+import IMAGE_CASE_INDUSTRIAL_6 from '../../img/cases/industrial/6.png'
 
-import ImageCaseResidencial1 from "../../img/cases/residencial/1.jpg";
-import ImageCaseResidencial2 from "../../img/cases/residencial/2.jpg";
+import IMAGE_CASE_RESIDENCIAL_1 from '../../img/cases/residencial/1.jpg'
+import IMAGE_CASE_RESIDENCIAL_2 from '../../img/cases/residencial/2.jpg'
 
 const CATEGORY = {
   INDUSTRIAL: 1,
@@ -27,12 +27,12 @@ const categories = {
   [CATEGORY.INDUSTRIAL]: {
     id: CATEGORY.INDUSTRIAL,
     title: 'Industrial',
-    backgroundImage: ImageCaseIndustrial1,
+    backgroundImage: IMAGE_CASE_INDUSTRIAL_1,
   },
   [CATEGORY.RESIDENCIAL]: {
     id: CATEGORY.RESIDENCIAL,
     title: 'Residencial',
-    backgroundImage: ImageCaseResidencial1,
+    backgroundImage: IMAGE_CASE_RESIDENCIAL_1,
   },
 }
 
@@ -65,12 +65,12 @@ const itemsByCategory = {
         </div>
       ),
       images: [
-        ImageCaseIndustrial1,
-        ImageCaseIndustrial2,
-        ImageCaseIndustrial3,
-        ImageCaseIndustrial4,
-        ImageCaseIndustrial5,
-        ImageCaseIndustrial6
+        IMAGE_CASE_INDUSTRIAL_1,
+        IMAGE_CASE_INDUSTRIAL_2,
+        IMAGE_CASE_INDUSTRIAL_3,
+        IMAGE_CASE_INDUSTRIAL_4,
+        IMAGE_CASE_INDUSTRIAL_5,
+        IMAGE_CASE_INDUSTRIAL_6
       ]
     }
   ],
@@ -86,7 +86,7 @@ const itemsByCategory = {
           <p>Todas as soluções foram aprovadas pela cliente Adriana, que se disse satisfeita com a redução de custos em aproximadamente 50%, conseguindo realizar o sonho da casa própria com preço justo e atendendo suas necessidades de moradia.</p>
         </div>
       ),
-      images: [ImageCaseResidencial1, ImageCaseResidencial2]
+      images: [IMAGE_CASE_RESIDENCIAL_1, IMAGE_CASE_RESIDENCIAL_2]
     },
   ],
 }
