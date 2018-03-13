@@ -4,6 +4,7 @@ import './index.scss';
 import Modal from './Modal'
 import Category from './Category'
 import { categories } from './data'
+import FancySeparator from '../FancySeparator'
 
 
 class Portfolio extends Component {
@@ -32,15 +33,11 @@ class Portfolio extends Component {
 
   render = () => {
     return (
-      <div id='cases'>
-        <div>
+      <div id='portfolio-container'>
+        <div id='portfolio'>
           <h2>Cases</h2>
-          <div className='pagetitle-separator'>
-            <div className='pagetitle-separator-border'>
-              <div className='pagetitle-separator-box'></div>
-            </div>
-          </div>
-          <ul className='cases-list'>
+          <FancySeparator />
+          <div className='portfolio-list'>
             {Object.values(categories).map(category =>
               <Category
                 key={category.id}
@@ -48,7 +45,7 @@ class Portfolio extends Component {
                 onClick={this.handleCategoryClicked}
               />)
             }
-          </ul>
+          </div>
         </div>
         {this.state.isModalVisible && this.state.selectedCategoryId &&
           <Modal
