@@ -8,7 +8,7 @@ class Header extends Component {
     this.scroll = scroll;
 
     this.state = {
-      classe: 'bg-color-transparent',
+      headerClass: 'bg-color-transparent',
       isMobile: false,
       configToScroll: {
         offset: -75,
@@ -23,7 +23,7 @@ class Header extends Component {
     window.addEventListener('scroll', (event) => {
       if (window.innerWidth >= 767) {
         this.setState({
-          classe: window.scrollY === 0 ? 'bg-color-transparent' : 'bg-color-light-dark'
+          headerClass: window.scrollY === 0 ? 'bg-color-transparent' : 'bg-color-light-dark'
         });
       }
     });
@@ -44,7 +44,7 @@ class Header extends Component {
 
   render() {
     return (
-      <header id='header-menu' className={this.state.classe}>
+      <header id='header-menu' className={this.state.headerClass}>
         <div>
           <a className='logo' onClick={() => this.scrollToElement('#banner')} title='Quéops Engenharia'>Quéops Engenharia</a>
           <i className='fa fa-bars menu-mobile' onClick={this.openMenu.bind(this)}></i>
