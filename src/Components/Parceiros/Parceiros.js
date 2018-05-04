@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
+
 import './Parceiros.scss';
+import MosaicLogo from "../../img/mosaic-logo.png";
+
 
 class Parceiros extends Component {
   render() {
@@ -14,18 +17,12 @@ class Parceiros extends Component {
           </div>
 
           <div className='conteudo'>
-
-              <article>
-                <a target="_blank" rel="noopener noreferrer" href="https://www.mosaic.eng.br/">
-                  <h3>Mosaic</h3>
-                  <img src="http://via.placeholder.com/350x150" alt=""/>
-                </a>
-                <p>aqui tinha os telefones</p>
-              </article>
-
-            {/* <aside>
-              <p>Texto sobre a Mosaic?</p>
-            </aside> */}
+            <article>
+              <a target="_blank" rel="noopener noreferrer" href="https://www.mosaic.eng.br/">
+                <h3>Mosaic</h3>
+                <img src={MosaicLogo} alt="http://via.placeholder.com/350x150" />
+              </a>
+            </article>
           </div>
         </div>
       </div>

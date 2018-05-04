@@ -20,13 +20,10 @@
 
     .conteudo {
       display: flex;
-      justify-content: space-between;
+      justify-content: space-evenly;
 
       article {
-        // width: 30%;
         text-align: center;
-
-
 
         i {
           font-size: 18px;
@@ -38,14 +35,11 @@
           font-size: 18px;
           color: $c-white;
 
-
-
           a:-webkit-any-link {
             color: white;
             text-decoration: none;
           }
         }
-
       }
 
       aside {
@@ -53,7 +47,6 @@
         color: $c-white;
         font-size: 15px;
         text-decoration: none;
-
 
         iframe {
           border: 0 none;
