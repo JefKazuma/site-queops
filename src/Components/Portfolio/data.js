@@ -106,7 +106,7 @@ const itemsByCategory = {
           <h3>Diferencial</h3>
           <p>Com uso de software em tecnologia BIM (Building Information Modeling), elaboramos maquete 3D do empreendimento, levantamento quantitativo de materiais e serviços, assim como o orçamento executivo de execução. O cliente neste momento, passou a ter um maior poder de negociação com futuros fornecedores, uma vez que o escopo da obra fora previamente projetado e definido. A diferença entre orçamentos de execução apresentados por empresas terceiras chegou a incríveis 30%.</p>
           <h3>Processo</h3>
-          <p>Todas as máquinas existentes no barracão anterior foram modeladas em escala real em 3D, utilizando os programas CREO 3.0 e SolidWorks. Paralelamente, as necessidades dos funcionários foram estudadas através de entrevistas, visando otimização de seus deslocamentos, processos internos, comunicação e ergonomia. Todo o equipamento existente foi aproveitado, com adição de esteiras e automações de processos.</p>
+          <p>Todas as máquinas existentes no barracão anterior foram modeladas em escala real em 3D, utilizando o programa SolidWorks. Paralelamente, as necessidades dos funcionários foram estudadas através de entrevistas, visando otimização de seus deslocamentos, processos internos, comunicação e ergonomia. Todo o equipamento existente foi aproveitado, com adição de esteiras e automações de processos.</p>
           <p>O projeto arquitetônico seguiu o layout industrial definido e sua área, devido ao planejamento enxuto dos processos, foi reduzida, gerando economia ao cliente. Outro fator econômico projetado foi o de sistemas de reaproveitamento de águas pluviais, reutilizando-a em banheiros, vestiários e em limpeza do piso industrial.</p>
         </div>
       ),
