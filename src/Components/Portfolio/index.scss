@@ -1,0 +1,89 @@
+@import '../../_App.scss';
+
+@mixin section-title {
+  font-size: 36px;
+  font-weight: normal;
+  line-height: 42px;
+  margin: 0 0 10px;
+  text-align: center;
+  color: $c-white;
+}
+
+@mixin portfolio-list {
+  max-width: 1200px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+@mixin portfolio-category {
+  text-align: center;
+  position: relative;
+  width: 250px;
+  height: 250px;
+  cursor: pointer;
+}
+
+@mixin portfolio-category-title {
+  h3 {
+    font-size: 25px;
+    font-weight: 300;
+    margin: 0;
+    text-transform: uppercase;
+    color: $c-white;
+  }
+}
+
+@mixin portfolio-category-background {
+  height: 100%;
+  z-index: 1;
+  background-size: cover;
+  background-position: center;
+  transition: all 0.4s;
+  opacity: 0.7;
+}
+
+
+#portfolio-container {
+  background-color: #373941;
+
+  #portfolio {
+    max-width: 1200px;
+    padding: 30px 30px 60px 30px;
+    margin: 0 auto;
+
+    h2 {
+      @include section-title;
+    }
+
+    .portfolio-list {
+      @include portfolio-list;
+
+      .portfolio-category {
+        @include portfolio-category;
+
+        .portfolio-category-title {
+          @include portfolio-category-title;
+        }
+
+        .portfolio-category-image {
+          @include portfolio-category-background;
+
+          &::before {
+            height: 100%;
+            transition: all 0.4s;
+          }
+        }
+
+        &:hover {
+          .portfolio-category-image {
+            transform: scale(1.1);
+
+            &::before {
+              background-color: rgba($color: $c-yellow, $alpha: 0.5);
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,4 +1,4 @@
-@import '../../_App.scss';
+@import '../../../_App.scss';
 @import "~slick-carousel/slick/slick.css";
 @import "~slick-carousel/slick/slick-theme.css";
 
@@ -30,6 +30,18 @@
     }
   }
 
+  .custom-modal-tab-container {
+    display: flex;
+
+    .custom-modal-tab {
+      background-color: $c-yellow;
+      color: $c-white;
+      margin: 5px;
+      padding: 10px;
+      cursor: pointer;
+    }
+  }
+
   .custom-modal-text {
     padding: 20px;
 
@@ -37,8 +49,8 @@
       margin: 0 0 20px 0;
     }
   }
-  
-  .custom-moda-galery {
+
+  .custom-modal-galery {
     padding: 10px 30px 40px;
 
     .slick-prev,

@@ -6,9 +6,9 @@ class Header extends Component {
   constructor(props) {
     super(props);
     this.scroll = scroll;
-  
+
     this.state = {
-      classe: 'bg-color-transparent',
+      headerClass: 'bg-color-transparent',
       isMobile: false,
       configToScroll: {
         offset: -75,
@@ -18,12 +18,12 @@ class Header extends Component {
       }
     };
   }
-  
+
   componentDidMount() {
     window.addEventListener('scroll', (event) => {
       if (window.innerWidth >= 767) {
         this.setState({
-          classe: window.scrollY === 0 ? 'bg-color-transparent' : 'bg-color-light-dark'
+          headerClass: window.scrollY === 0 ? 'bg-color-transparent' : 'bg-color-light-dark'
         });
       }
     });
@@ -44,7 +44,7 @@ class Header extends Component {
 
   render() {
     return (
-      <header id='header-menu' className={this.state.classe}>
+      <header id='header-menu' className={this.state.headerClass}>
         <div>
           <a className='logo' onClick={() => this.scrollToElement('#banner')} title='Quéops Engenharia'>Quéops Engenharia</a>
           <i className='fa fa-bars menu-mobile' onClick={this.openMenu.bind(this)}></i>
@@ -57,7 +57,10 @@ class Header extends Component {
                 <a onClick={() => this.scrollToElement('#cases')} title='Cases'>Cases</a>
               </li>
               <li>
-                <a onClick={() => this.scrollToElement('#parceiros')} title='Parceiros'>Parceiros</a>
+                <a onClick={() => this.scrollToElement('#clientes')} title='Clientes'>Clientes</a>
+              </li>
+              <li>
+              <a onClick={() => this.scrollToElement('#parceiros')} title='Parceiros'>Parceiros</a>
               </li>
               <li>
                 <a onClick={() => this.scrollToElement('#contato')} title='Contato'>Contato</a>

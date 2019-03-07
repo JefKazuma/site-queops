@@ -9,20 +9,21 @@
 
   &.bg-color-light-dark {
     background-color: rgba($color: #332f2e, $alpha: 0.9);
-    
+
     div {
       padding: 5px 20px;
 
       .logo {
-        width: 230px;
-        height: 65px;
+        width: 250px;
+        height: 70px;
+        background-color: rgba(#FFF, 0);
       }
     }
   }
 
   div {
     max-width: 1200px;
-    padding: 10px 20px;
+    padding: 0 20px 10px 20px;
     margin: 0 auto;
     transition: all 0.4s;
     display: flex;
@@ -48,13 +49,14 @@
         color: $c-yellow;
       }
     }
-    
+
     .logo {
-      width: 250px;
-      height: 70px;
+      width: 450px;
+      height: 150px;
       display: inline-block;
       text-indent: -999999px;
       transition: all 0.4s;
+      background-color: black;
       background-repeat: no-repeat;
       background-size: cover;
       background-position: center;
@@ -106,7 +108,7 @@
         height: 0;
         margin-top: 0;
         overflow: hidden;
-        
+
         &.active {
           height: 156px;
         }

@@ -1,11 +1,12 @@
 @import '../../_App.scss';
 
 #parceiros {
-  background-color: #2a2c33;
+  background-color: #373941;
+
 
   > div {
-    max-width: 1200px;
-    padding: 30px 35px 55px;
+    max-width: 800px;
+    padding: 30px 30px 55px;
     margin: 0 auto;
 
     h2 {
@@ -17,41 +18,57 @@
       color: $c-white;
     }
 
-    .slick-prev,
-    .slick-next {
-      height: 50px;
-
-      .fa {
-        font-size: 50px;
-        color: $c-yellow;
-      }
-
-      &::before {
-        display: none;
-      }
-    }
-
-    .slick-track {
+    .conteudo {
       display: flex;
-    }
+      justify-content: space-evenly;
 
-    .slick-slide {
-      height: auto;
-      max-height: 300px;
-      align-self: center;
-    }
+      article {
+        text-align: center;
 
-    .center {
-      img {
-        width: calc(100% - 20px);
-        margin: 10px;
-        opacity: 0.8;
+        i {
+          font-size: 18px;
+          color: $c-yellow;
+          margin-right: 10px;
+        }
+
+        span, p, h3 {
+          font-size: 18px;
+          color: $c-white;
+
+          a:-webkit-any-link {
+            color: white;
+            text-decoration: none;
+          }
+        }
       }
 
-      .slick-center {
-        img {
-          opacity: 1;
-          transform: scale(1.08);
+      aside {
+        width: 70%;
+        color: $c-white;
+        font-size: 15px;
+        text-decoration: none;
+
+        iframe {
+          border: 0 none;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width : $media-tablet) {
+  #contato {
+    > div {
+      .conteudo {
+        display: block;
+
+        article {
+          width: 100%;
+          margin-bottom: 30px;
+        }
+
+        aside {
+          width: 100%;
         }
       }
     }
